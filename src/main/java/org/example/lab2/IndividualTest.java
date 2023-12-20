@@ -51,6 +51,7 @@ public class IndividualTest {
                 .and()
                 .body("name", equalTo(name));
     }
+
     @Test(dependsOnMethods = "verifyGetAction")
     public void verifyChangeAction() {
         changedName = Faker.instance().name().name();

@@ -41,7 +41,9 @@ public class selenium_test_rozetka {
 
     @Test
     public void testClick() {
-        WebElement menuBtn = firefoxDriver.findElement(By.xpath("/html/body/app-root/div/div/rz-header/rz-main-header/header/div/div/rz-mobile-user-menu/button"));
+        WebElement menuBtn = firefoxDriver.findElement(
+                By.xpath("/html/body/app-root/div/div/rz-header/rz-main-header/" +
+                        "header/div/div/rz-mobile-user-menu/button"));
         Assert.assertNotNull(menuBtn);
         menuBtn.click();
     }
@@ -65,10 +67,14 @@ public class selenium_test_rozetka {
 
         for(int i = 0; i < 5; i++){
 
-            WebElement ruLangBtn = firefoxDriver.findElement(By.xpath("/html/body/app-root/div/div/rz-header/rz-main-header/header/div/div/ul/li[1]/rz-lang/ul/li[1]"));
+            WebElement ruLangBtn = firefoxDriver.findElement(
+                    By.xpath("/html/body/app-root/div/div/rz-header/" +
+                            "rz-main-header/header/div/div/ul/li[1]/rz-lang/ul/li[1]"));
             Assert.assertNotNull(ruLangBtn);
 
-            WebElement ukLangBtn = firefoxDriver.findElement(By.xpath("/html/body/app-root/div/div/rz-header/rz-main-header/header/div/div/ul/li[1]/rz-lang/ul/li[2]"));
+            WebElement ukLangBtn = firefoxDriver.findElement(
+                    By.xpath("/html/body/app-root/div/div/rz-header/" +
+                            "rz-main-header/header/div/div/ul/li[1]/rz-lang/ul/li[2]"));
             Assert.assertNotNull(ukLangBtn);
             if(ruLangBtn.getAttribute("class").contains("active")){
                ukLangBtn.click();
